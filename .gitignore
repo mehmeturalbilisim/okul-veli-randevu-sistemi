@@ -1,0 +1,141 @@
+# Okul Veli Randevu Sistemi
+
+> Okullar için veliler ve öğretmenler arasında randevu yönetimini kolaylaştıran web uygulaması.
+
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Node](https://img.shields.io/badge/node-16%2B-green.svg)
+![React](https://img.shields.io/badge/react-18-blue.svg)
+
+## 🚀 Özellikler
+
+- **👨‍💼 Kullanıcı Yönetimi**: Veli, Öğretmen ve Yönetici rollerine göre ayrılmış yönetim
+- **📅 Randevu Sistemi**: Velilerin öğretmenlerle kolayca randevu alması
+- **⏰ Uygunluk Yönetimi**: Öğretmenlerin uygun saatlerini belirleme
+- **📊 Yönetim Paneli**: Sistem yöneticileri için kontrol paneli
+- **🔐 Güvenlik**: JWT tabanlı kimlik doğrulama ve rol kontrol sistemi
+- **📱 Responsive Design**: Tüm cihazlarda sorunsuz çalışma
+- **🎨 Tailwind CSS**: Modern ve kullanıcı dostu arayüz
+
+## 📋 Başlangıç
+
+### Gereksinimler
+- Node.js 16 veya üzeri
+- npm veya yarn
+- MongoDB
+
+### Hızlı Kurulum
+
+```bash
+# Repository klonla
+git clone https://github.com/mehmeturalbilisim/okul-veli-randevu-sistemi.git
+cd okul-veli-randevu-sistemi
+
+# Backend kur
+cd backend
+cp .env.example .env
+npm install
+npm run dev
+
+# Frontend kur (yeni terminal)
+cd ../frontend
+npm install
+npm start
+```
+
+Backend: http://localhost:5000
+Frontend: http://localhost:3000
+
+Detaylı kurulum talimatları için [INSTALLATION.md](./INSTALLATION.md) dosyasına bakın.
+
+## 🔑 Kullanıcı Rolleri
+
+### Veli
+- Öğretmenleri görüntüleme
+- Uygun saatlere göre randevu alma
+- Randevularını yönetme
+
+### Öğretmen
+- Profil bilgisini güncelleme
+- Uygunluk saatlerini belirleme
+- Gelen randevuları yönetme (onay/reddet)
+
+### Yönetici
+- Sistem istatistiklerini görüntüleme
+- Kullanıcıları yönetme
+- Tüm randevuları izleme
+
+## 🛠️ Teknoloji Stack
+
+### Backend
+- **Express.js** - REST API sunucusu
+- **MongoDB** - Veritabanı
+- **Mongoose** - ODM
+- **JWT** - Kimlik doğrulama
+- **bcryptjs** - Şifre hashleme
+
+### Frontend
+- **React 18** - UI kütüphanesi
+- **React Router** - Sayfa yönlendirmesi
+- **Axios** - HTTP istemcisi
+- **Tailwind CSS** - Stil kütüphanesi
+- **Context API** - State yönetimi
+
+## 📁 Proje Yapısı
+
+```
+okul-veli-randevu-sistemi/
+├── backend/
+│   ├── src/
+│   │   ├── models/           # Veritabanı şemaları
+│   │   ├── routes/           # API endpoint'leri
+│   │   ├── middleware/       # Middleware fonksiyonları
+│   │   └── index.js         # Ana uygulama dosyası
+│   ├── .env.example
+│   └── package.json
+├── frontend/
+│   ├── src/
+│   │   ├── components/       # React bileşenleri
+│   │   ├── pages/           # Sayfa bileşenleri
+│   │   ├── services/        # API çağrı servisleri
+│   │   ├── contexts/        # Context API dosyaları
+│   │   ├── hooks/           # Custom hooks
+│   │   ├── App.js          # Ana bileşen
+│   │   └── index.js        # Entry point
+│   ├── public/
+│   ├── tailwind.config.js
+│   └── package.json
+├── README.md
+└── INSTALLATION.md
+```
+
+## 🔗 API Endpoint'leri
+
+Tüm API endpoint'leri ve kullanım örnekleri için [API Dokümantasyonu](./INSTALLATION.md#api-endpoints) sayfasına bakın.
+
+## 🤝 Katkıda Bulunma
+
+Projeye katkıda bulunmak isterseniz:
+
+1. Repository'yi fork edin
+2. Özellik dalı oluşturun (`git checkout -b feature/YeniOzellik`)
+3. Değişiklikleri commit edin (`git commit -m 'YeniOzellik ekle'`)
+4. Dalı push edin (`git push origin feature/YeniOzellik`)
+5. Pull Request oluşturun
+
+## 📝 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](./LICENSE) dosyasına bakın.
+
+## 📧 İletişim
+
+Sorularınız veya önerileriniz için [issue](https://github.com/mehmeturalbilisim/okul-veli-randevu-sistemi/issues) oluşturun.
+
+---
+
+**Yapılacaklar:**
+- [ ] Email bildirimleri ekle
+- [ ] SMS gönderimi
+- [ ] İleri raporlama özellikleri
+- [ ] Mobil uygulama
+- [ ] Takvim entegrasyonu
+
